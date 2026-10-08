@@ -1,0 +1,60 @@
+================ MLP Exp19 Comparison Final Validation ================
+SelectionMetric: 0.037561
+Output mode: three directly predicted system-level scalars
+
+[Cumulative voltage deviation regression]
+Vdev_MAE: 0.007262
+Vdev_RMSE: 0.009541
+Vdev_MaxErr: 0.057364
+
+[Worst voltage-margin regression]
+Vworst_MAE: 0.000557
+Vworst_RMSE: 0.000794
+Vworst_MaxErr: 0.007149
+
+[Worst voltage-margin classification]
+Vworst_FalseSafe: 0.55%
+Vworst_FalseViolate: 1.15%
+Vworst_SignAcc: 99.166667
+Vworst_BalancedAcc: 99.149770
+Vworst_UnsafeRecall: 99.447950
+Vworst_SafeRecall: 98.851590
+Vworst_TrueUnsafeCount: 1268
+Vworst_PredUnsafeCount: 1274
+Vworst_TP: 1261
+Vworst_TN: 1119
+Vworst_FP: 13
+Vworst_FN: 7
+
+[Worst current-margin regression]
+WorstI_MAE: 0.006857
+WorstI_RMSE: 0.009094
+WorstI_MaxErr: 0.057899
+
+[Worst current-margin classification]
+WorstI_FalseSafe: 0.24%
+WorstI_FalseViolate: 0.52%
+WorstI_SignAcc: 99.625000
+WorstI_BalancedAcc: 99.620909
+WorstI_UnsafeRecall: 99.757282
+WorstI_SafeRecall: 99.484536
+WorstI_TrueUnsafeCount: 1236
+WorstI_PredUnsafeCount: 1239
+WorstI_TP: 1233
+WorstI_TN: 1158
+WorstI_FP: 6
+WorstI_FN: 3
+
+[Loss]
+ValBaseLoss: 0.005026
+ValTotalLoss: 0.007588
+ValVDevReg: 0.001314
+ValVWorstReg: 0.002401
+ValVSignLoss: 0.005595
+ValWorstIReg: 0.001311
+ValISignLoss: 0.011481
+
+Binary count estimate: {'shared_hidden_binary': 48, 'vdev_head_binary': 16, 'vworst_head_binary': 16, 'iworst_head_binary': 16, 'head_binary': 48, 'total_binary': 96, 'predict_target': 'three direct scalars: Vdev_total, Vworst, WorstI'}
+best model: checkpoints\mlp_exp19_three_direct_scalars_best.pt
+MILP engine: checkpoints\mlp_exp19_three_direct_scalars_milp_engine.pt
+===============================================================

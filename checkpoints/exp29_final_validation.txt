@@ -1,0 +1,71 @@
+================ ST-SGCN Exp29 Final Validation ================
+SelectionMetric: 100.571363
+Output mode: four independent SGC branches, one scalar each
+SelectionRegressionScore: 0.756019
+SelectionSafetyViolation: 0.495761
+SelectionSafetyFeasible: 0
+
+[Cumulative voltage deviation regression]
+Vdev_MAE: 0.005768
+Vdev_RMSE: 0.007682
+Vdev_MaxErr: 0.081297
+
+[Worst voltage-margin regression]
+Vworst_MAE: 0.001112
+Vworst_RMSE: 0.001520
+Vworst_MaxErr: 0.012921
+
+[Worst voltage-margin classification]
+Vworst_FalseSafe: 1.27%
+Vworst_FalseViolate: 1.42%
+Vworst_SignAcc: 98.640000
+Vworst_BalancedAcc: 98.655086
+Vworst_UnsafeRecall: 98.732289
+Vworst_SafeRecall: 98.577882
+Vworst_TrueUnsafeCount: 4023
+Vworst_PredUnsafeCount: 4057
+Vworst_TP: 3972
+Vworst_TN: 5892
+Vworst_FP: 85
+Vworst_FN: 51
+
+[Worst current-margin regression]
+WorstI_MAE: 0.012544
+WorstI_RMSE: 0.018261
+WorstI_MaxErr: 0.180672
+
+[Total active network-loss regression]
+Ploss_MAE: 0.005077
+Ploss_RMSE: 0.006742
+Ploss_MaxErr: 0.094624
+
+[Worst current-margin classification]
+WorstI_FalseSafe: 0.69%
+WorstI_FalseViolate: 0.86%
+WorstI_SignAcc: 99.180000
+WorstI_BalancedAcc: 99.223769
+WorstI_UnsafeRecall: 99.310065
+WorstI_SafeRecall: 99.137473
+WorstI_TrueUnsafeCount: 2464
+WorstI_PredUnsafeCount: 2512
+WorstI_TP: 2447
+WorstI_TN: 7471
+WorstI_FP: 65
+WorstI_FN: 17
+
+[Loss]
+ValBaseLoss: 0.013153
+ValTotalLoss: 0.017175
+ValVDevReg: 0.000545
+ValVWorstReg: 0.004874
+ValVSignLoss: 0.010016
+ValWorstIReg: 0.004185
+ValPLossReg: 0.004078
+ValPLossRelative: 0.001968
+ValPLossObjective: 0.003550
+ValISignLoss: 0.006699
+
+Binary count estimate: {'sgc_binary': 0, 'vdev_head_binary': 24, 'vworst_head_binary': 24, 'iworst_head_binary': 24, 'ploss_head_binary': 24, 'readout_binary': 96, 'total_binary': 96, 'K': 4, 'order_count': 5, 'use_sgc_relu': False, 'predict_target': 'four direct scalars: Vdev_total, Vworst, WorstI, Ploss_total; one independent SGC scalar branch per target'}
+best model: checkpoints\st_sgcn_exp29_four_independent_sgc_scalar_branches_best.pt
+MILP engine: checkpoints\st_sgcn_exp29_four_independent_sgc_scalar_branches_milp_engine.pt
+===============================================================

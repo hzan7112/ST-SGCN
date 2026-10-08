@@ -1,0 +1,71 @@
+================ ST-SGCN Exp28 Final Validation ================
+SelectionMetric: 101.280960
+Output mode: four system-level scalars with triple linear SGC encoders
+SelectionRegressionScore: 0.657290
+SelectionSafetyViolation: 1.215231
+SelectionSafetyFeasible: 0
+
+[Cumulative voltage deviation regression]
+Vdev_MAE: 0.006418
+Vdev_RMSE: 0.008464
+Vdev_MaxErr: 0.080155
+
+[Worst voltage-margin regression]
+Vworst_MAE: 0.001215
+Vworst_RMSE: 0.001617
+Vworst_MaxErr: 0.011701
+
+[Worst voltage-margin classification]
+Vworst_FalseSafe: 1.52%
+Vworst_FalseViolate: 1.96%
+Vworst_SignAcc: 98.220000
+Vworst_BalancedAcc: 98.263107
+Vworst_UnsafeRecall: 98.483719
+Vworst_SafeRecall: 98.042496
+Vworst_TrueUnsafeCount: 4023
+Vworst_PredUnsafeCount: 4079
+Vworst_TP: 3962
+Vworst_TN: 5860
+Vworst_FP: 117
+Vworst_FN: 61
+
+[Worst current-margin regression]
+WorstI_MAE: 0.012991
+WorstI_RMSE: 0.018900
+WorstI_MaxErr: 0.170790
+
+[Total active network-loss regression]
+Ploss_MAE: 0.001057
+Ploss_RMSE: 0.001388
+Ploss_MaxErr: 0.016060
+
+[Worst current-margin classification]
+WorstI_FalseSafe: 0.89%
+WorstI_FalseViolate: 0.97%
+WorstI_SignAcc: 99.050000
+WorstI_BalancedAcc: 99.069230
+WorstI_UnsafeRecall: 99.107143
+WorstI_SafeRecall: 99.031316
+WorstI_TrueUnsafeCount: 2464
+WorstI_PredUnsafeCount: 2515
+WorstI_TP: 2442
+WorstI_TN: 7463
+WorstI_FP: 73
+WorstI_FN: 22
+
+[Loss]
+ValBaseLoss: 0.010743
+ValTotalLoss: 0.015186
+ValVDevReg: 0.000665
+ValVWorstReg: 0.005524
+ValVSignLoss: 0.012010
+ValWorstIReg: 0.004403
+ValPLossReg: 0.000177
+ValPLossRelative: 0.000073
+ValPLossObjective: 0.000151
+ValISignLoss: 0.005093
+
+Binary count estimate: {'sgc_binary': 0, 'vdev_head_binary': 24, 'vworst_head_binary': 24, 'iworst_head_binary': 24, 'ploss_head_binary': 256, 'ploss_head_layer1_binary': 128, 'ploss_head_layer2_binary': 128, 'readout_binary': 328, 'total_binary': 328, 'K': 5, 'order_count': 6, 'use_sgc_relu': False, 'voltage_in_features': 6, 'current_in_features': 6, 'loss_in_features': 6, 'predict_target': 'four direct scalars: Vdev_total, Vworst, WorstI, Ploss_total; Voltage, current and loss tasks use separate linear SGC encoders'}
+best model: checkpoints\st_sgcn_exp28_k5_triple_linear_sgc_task_heads_best.pt
+MILP engine: checkpoints\st_sgcn_exp28_k5_triple_linear_sgc_task_heads_milp_engine.pt
+===============================================================

@@ -1,0 +1,71 @@
+================ ST-SGCN Exp21 Final Validation ================
+SelectionMetric: 101.096256
+Output mode: four directly predicted system-level scalars
+SelectionRegressionScore: 1.024094
+SelectionSafetyViolation: 0.993847
+SelectionSafetyFeasible: 0
+
+[Cumulative voltage deviation regression]
+Vdev_MAE: 0.009265
+Vdev_RMSE: 0.012403
+Vdev_MaxErr: 0.081330
+
+[Worst voltage-margin regression]
+Vworst_MAE: 0.001694
+Vworst_RMSE: 0.002247
+Vworst_MaxErr: 0.010159
+
+[Worst voltage-margin classification]
+Vworst_FalseSafe: 1.70%
+Vworst_FalseViolate: 2.57%
+Vworst_SignAcc: 97.875000
+Vworst_BalancedAcc: 97.862327
+Vworst_UnsafeRecall: 98.299320
+Vworst_SafeRecall: 97.425335
+Vworst_TrueUnsafeCount: 2058
+Vworst_PredUnsafeCount: 2073
+Vworst_TP: 2023
+Vworst_TN: 1892
+Vworst_FP: 50
+Vworst_FN: 35
+
+[Worst current-margin regression]
+WorstI_MAE: 0.012575
+WorstI_RMSE: 0.019093
+WorstI_MaxErr: 0.179544
+
+[Total active network-loss regression]
+Ploss_MAE: 0.006793
+Ploss_RMSE: 0.009227
+Ploss_MaxErr: 0.100208
+
+[Worst current-margin classification]
+WorstI_FalseSafe: 0.60%
+WorstI_FalseViolate: 0.77%
+WorstI_SignAcc: 99.300000
+WorstI_BalancedAcc: 99.314127
+WorstI_UnsafeRecall: 99.396500
+WorstI_SafeRecall: 99.231754
+WorstI_TrueUnsafeCount: 1657
+WorstI_PredUnsafeCount: 1665
+WorstI_TP: 1647
+WorstI_TN: 2325
+WorstI_FP: 18
+WorstI_FN: 10
+
+[Loss]
+ValBaseLoss: 0.007704
+ValTotalLoss: 0.013314
+ValVDevReg: 0.000548
+ValVWorstReg: 0.003858
+ValVSignLoss: 0.018913
+ValWorstIReg: 0.001553
+ValPLossReg: 0.001332
+ValPLossRelative: 0.001887
+ValPLossObjective: 0.001471
+ValISignLoss: 0.002943
+
+Binary count estimate: {'sgc_binary': 0, 'voltage_shared_head_binary': 32, 'vdev_private_head_binary': 8, 'vworst_private_head_binary': 8, 'current_loss_pair_head_binary': 48, 'readout_binary': 96, 'total_binary': 96, 'K': 4, 'order_count': 5, 'use_sgc_relu': False, 'predict_target': 'shared/private voltage plus shared current/loss readouts: Vdev_total, Vworst, WorstI, Ploss_total'}
+best model: checkpoints\st_sgcn_exp21_shared_private_voltage_best.pt
+MILP engine: checkpoints\st_sgcn_exp21_shared_private_voltage_milp_engine.pt
+===============================================================

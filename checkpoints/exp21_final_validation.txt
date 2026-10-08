@@ -1,0 +1,71 @@
+================ ST-SGCN Exp21 Final Validation ================
+SelectionMetric: 100.709970
+Output mode: four directly predicted system-level scalars
+SelectionRegressionScore: 1.023515
+SelectionSafetyViolation: 0.607618
+SelectionSafetyFeasible: 0
+
+[Cumulative voltage deviation regression]
+Vdev_MAE: 0.010737
+Vdev_RMSE: 0.014690
+Vdev_MaxErr: 0.089458
+
+[Worst voltage-margin regression]
+Vworst_MAE: 0.001313
+Vworst_RMSE: 0.001795
+Vworst_MaxErr: 0.011860
+
+[Worst voltage-margin classification]
+Vworst_FalseSafe: 1.60%
+Vworst_FalseViolate: 2.01%
+Vworst_SignAcc: 98.200000
+Vworst_BalancedAcc: 98.194131
+Vworst_UnsafeRecall: 98.396501
+Vworst_SafeRecall: 97.991761
+Vworst_TrueUnsafeCount: 2058
+Vworst_PredUnsafeCount: 2064
+Vworst_TP: 2025
+Vworst_TN: 1903
+Vworst_FP: 39
+Vworst_FN: 33
+
+[Worst current-margin regression]
+WorstI_MAE: 0.012435
+WorstI_RMSE: 0.018841
+WorstI_MaxErr: 0.194792
+
+[Total active network-loss regression]
+Ploss_MAE: 0.007333
+Ploss_RMSE: 0.009801
+Ploss_MaxErr: 0.102022
+
+[Worst current-margin classification]
+WorstI_FalseSafe: 0.54%
+WorstI_FalseViolate: 0.77%
+WorstI_SignAcc: 99.325000
+WorstI_BalancedAcc: 99.344302
+WorstI_UnsafeRecall: 99.456850
+WorstI_SafeRecall: 99.231754
+WorstI_TrueUnsafeCount: 1657
+WorstI_PredUnsafeCount: 1666
+WorstI_TP: 1648
+WorstI_TN: 2325
+WorstI_FP: 18
+WorstI_FN: 9
+
+[Loss]
+ValBaseLoss: 0.006547
+ValTotalLoss: 0.012766
+ValVDevReg: 0.000767
+ValVWorstReg: 0.002538
+ValVSignLoss: 0.022095
+ValWorstIReg: 0.001515
+ValPLossReg: 0.001505
+ValPLossRelative: 0.002393
+ValPLossObjective: 0.001727
+ValISignLoss: 0.004607
+
+Binary count estimate: {'sgc_binary': 0, 'voltage_pair_head_binary': 48, 'current_loss_pair_head_binary': 48, 'readout_binary': 96, 'total_binary': 96, 'K': 4, 'order_count': 5, 'use_sgc_relu': False, 'predict_target': 'two paired shared readouts, four direct scalars: Vdev_total, Vworst, WorstI, Ploss_total'}
+best model: checkpoints\st_sgcn_exp21_two_paired_readouts_best.pt
+MILP engine: checkpoints\st_sgcn_exp21_two_paired_readouts_milp_engine.pt
+===============================================================

@@ -1,0 +1,71 @@
+================ ST-SGCN Exp22 Final Validation ================
+SelectionMetric: 101.368384
+Output mode: four directly predicted system-level scalars
+SelectionRegressionScore: 0.946306
+SelectionSafetyViolation: 1.273753
+SelectionSafetyFeasible: 0
+
+[Cumulative voltage deviation regression]
+Vdev_MAE: 0.008179
+Vdev_RMSE: 0.011109
+Vdev_MaxErr: 0.092245
+
+[Worst voltage-margin regression]
+Vworst_MAE: 0.001304
+Vworst_RMSE: 0.001777
+Vworst_MaxErr: 0.013595
+
+[Worst voltage-margin classification]
+Vworst_FalseSafe: 2.09%
+Vworst_FalseViolate: 2.37%
+Vworst_SignAcc: 97.775000
+Vworst_BalancedAcc: 97.770950
+Vworst_UnsafeRecall: 97.910593
+Vworst_SafeRecall: 97.631308
+Vworst_TrueUnsafeCount: 2058
+Vworst_PredUnsafeCount: 2061
+Vworst_TP: 2015
+Vworst_TN: 1896
+Vworst_FP: 46
+Vworst_FN: 43
+
+[Worst current-margin regression]
+WorstI_MAE: 0.012446
+WorstI_RMSE: 0.018625
+WorstI_MaxErr: 0.179464
+
+[Total active network-loss regression]
+Ploss_MAE: 0.007444
+Ploss_RMSE: 0.009985
+Ploss_MaxErr: 0.076882
+
+[Worst current-margin classification]
+WorstI_FalseSafe: 0.54%
+WorstI_FalseViolate: 0.77%
+WorstI_SignAcc: 99.325000
+WorstI_BalancedAcc: 99.344302
+WorstI_UnsafeRecall: 99.456850
+WorstI_SafeRecall: 99.231754
+WorstI_TrueUnsafeCount: 1657
+WorstI_PredUnsafeCount: 1666
+WorstI_TP: 1648
+WorstI_TN: 2325
+WorstI_FP: 18
+WorstI_FN: 9
+
+[Loss]
+ValBaseLoss: 0.006745
+ValTotalLoss: 0.007322
+ValVDevReg: 0.000443
+ValVWorstReg: 0.002718
+ValVSignLoss: 0.010111
+ValWorstIReg: 0.001875
+ValPLossReg: 0.001568
+ValPLossRelative: 0.002970
+ValPLossObjective: 0.001708
+ValISignLoss: 0.003577
+
+Binary count estimate: {'sgc_binary': 0, 'readout_binary': 96, 'total_binary': 96, 'voltage_shared_head_binary': 32, 'vdev_private_head_binary': 8, 'vworst_private_head_binary': 8, 'current_loss_pair_head_binary': 48, 'K': 4, 'order_count': 9, 'num_branches': 32, 'branch_feature_dim': 11, 'use_sgc_relu': False, 'predict_target': 'bus: Vdev/Vworst; branch: WorstI/Ploss'}
+best model: checkpoints\st_sgcn_exp22_directed_bus_branch_best.pt
+MILP engine: checkpoints\st_sgcn_exp22_directed_bus_branch_milp_engine.pt
+===============================================================

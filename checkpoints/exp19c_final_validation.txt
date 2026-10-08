@@ -1,0 +1,60 @@
+================ ST-SGCN Exp18C Final Validation ================
+SelectionMetric: 0.046926
+Output mode: three directly predicted system-level scalars
+
+[Cumulative voltage deviation regression]
+Vdev_MAE: 0.003696
+Vdev_RMSE: 0.004901
+Vdev_MaxErr: 0.031434
+
+[Worst voltage-margin regression]
+Vworst_MAE: 0.000881
+Vworst_RMSE: 0.001367
+Vworst_MaxErr: 0.010377
+
+[Worst voltage-margin classification]
+Vworst_FalseSafe: 0.47%
+Vworst_FalseViolate: 1.86%
+Vworst_SignAcc: 98.875000
+Vworst_BalancedAcc: 98.835845
+Vworst_UnsafeRecall: 99.526814
+Vworst_SafeRecall: 98.144876
+Vworst_TrueUnsafeCount: 1268
+Vworst_PredUnsafeCount: 1283
+Vworst_TP: 1262
+Vworst_TN: 1111
+Vworst_FP: 21
+Vworst_FN: 6
+
+[Worst current-margin regression]
+WorstI_MAE: 0.006560
+WorstI_RMSE: 0.009020
+WorstI_MaxErr: 0.085769
+
+[Worst current-margin classification]
+WorstI_FalseSafe: 0.32%
+WorstI_FalseViolate: 0.43%
+WorstI_SignAcc: 99.625000
+WorstI_BalancedAcc: 99.623411
+WorstI_UnsafeRecall: 99.676375
+WorstI_SafeRecall: 99.570447
+WorstI_TrueUnsafeCount: 1236
+WorstI_PredUnsafeCount: 1237
+WorstI_TP: 1232
+WorstI_TN: 1159
+WorstI_FP: 5
+WorstI_FN: 4
+
+[Loss]
+ValBaseLoss: 0.008143
+ValTotalLoss: 0.012624
+ValVDevReg: 0.000346
+ValVWorstReg: 0.006502
+ValVSignLoss: 0.008424
+ValWorstIReg: 0.001294
+ValISignLoss: 0.021449
+
+Binary count estimate: {'sgc_binary': 0, 'vdev_head_binary': 24, 'vworst_head_binary': 16, 'iworst_head_binary': 24, 'readout_binary': 64, 'total_binary': 64, 'K': 4, 'order_count': 5, 'use_sgc_relu': False, 'predict_target': 'three direct scalars: Vdev_total, Vworst, WorstI'}
+best model: checkpoints\st_sgcn_exp19c_three_direct_scalar_heads_best.pt
+MILP engine: checkpoints\st_sgcn_exp19c_three_direct_scalar_heads_milp_engine.pt
+===============================================================

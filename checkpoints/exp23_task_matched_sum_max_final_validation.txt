@@ -1,0 +1,72 @@
+================ ST-SGCN Exp23 Final Validation ================
+SelectionMetric: 113.476995
+Output mode: local entity scores with task-matched sum/max aggregation
+SelectionRegressionScore: 2.416085
+SelectionSafetyViolation: 13.235387
+SelectionSafetyFeasible: 0
+
+[Cumulative voltage deviation regression]
+Vdev_MAE: 0.016197
+Vdev_RMSE: 0.021920
+Vdev_MaxErr: 0.185930
+
+[Worst voltage-margin regression]
+Vworst_MAE: 0.004720
+Vworst_RMSE: 0.006497
+Vworst_MaxErr: 0.051480
+
+[Worst voltage-margin classification]
+Vworst_FalseSafe: 4.32%
+Vworst_FalseViolate: 7.72%
+Vworst_SignAcc: 94.025000
+Vworst_BalancedAcc: 93.975709
+Vworst_UnsafeRecall: 95.675413
+Vworst_SafeRecall: 92.276004
+Vworst_TrueUnsafeCount: 2058
+Vworst_PredUnsafeCount: 2119
+Vworst_TP: 1969
+Vworst_TN: 1792
+Vworst_FP: 150
+Vworst_FN: 89
+
+[Worst current-margin regression]
+WorstI_MAE: 0.048724
+WorstI_RMSE: 0.060940
+WorstI_MaxErr: 0.237358
+
+[Total active network-loss regression]
+Ploss_MAE: 0.008715
+Ploss_RMSE: 0.011683
+Ploss_MaxErr: 0.111187
+
+[Worst current-margin classification]
+WorstI_FalseSafe: 2.84%
+WorstI_FalseViolate: 3.46%
+WorstI_SignAcc: 96.800000
+WorstI_BalancedAcc: 96.853221
+WorstI_UnsafeRecall: 97.163549
+WorstI_SafeRecall: 96.542894
+WorstI_TrueUnsafeCount: 1657
+WorstI_PredUnsafeCount: 1691
+WorstI_TP: 1610
+WorstI_TN: 2262
+WorstI_FP: 81
+WorstI_FN: 47
+
+[Loss]
+ValBaseLoss: 0.246583
+ValTotalLoss: 0.284496
+ValVDevReg: 0.001729
+ValVWorstReg: 0.035086
+ValVSignLoss: 0.138487
+ValWorstIReg: 0.018358
+ValPLossReg: 0.002147
+ValPLossRelative: 0.003123
+ValPLossObjective: 0.002391
+ValLocalAux: 0.188155
+ValISignLoss: 0.238776
+
+Binary count estimate: {'sgc_binary': 0, 'local_relu_binary': 128, 'max_selector_binary': 64, 'vdev_local_relu_binary': 64, 'ploss_local_relu_binary': 64, 'vworst_max_selector_binary': 32, 'iworst_max_selector_binary': 32, 'total_binary': 192, 'K': 4, 'order_count': 9, 'predict_target': 'bus sum/max: Vdev/Vworst; branch max/sum: WorstI/Ploss'}
+best model: checkpoints\st_sgcn_exp23_task_matched_sum_max_best.pt
+MILP engine: checkpoints\st_sgcn_exp23_task_matched_sum_max_milp_engine.pt
+===============================================================

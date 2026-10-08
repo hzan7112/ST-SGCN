@@ -1,0 +1,71 @@
+================ ST-SGCN Exp24 Final Validation ================
+SelectionMetric: 100.822869
+Output mode: four directly predicted system-level scalars
+SelectionRegressionScore: 0.711282
+SelectionSafetyViolation: 0.751740
+SelectionSafetyFeasible: 0
+
+[Cumulative voltage deviation regression]
+Vdev_MAE: 0.004944
+Vdev_RMSE: 0.006620
+Vdev_MaxErr: 0.057475
+
+[Worst voltage-margin regression]
+Vworst_MAE: 0.001119
+Vworst_RMSE: 0.001509
+Vworst_MaxErr: 0.010204
+
+[Worst voltage-margin classification]
+Vworst_FalseSafe: 1.47%
+Vworst_FalseViolate: 1.79%
+Vworst_SignAcc: 98.340000
+Vworst_BalancedAcc: 98.371619
+Vworst_UnsafeRecall: 98.533433
+Vworst_SafeRecall: 98.209804
+Vworst_TrueUnsafeCount: 4023
+Vworst_PredUnsafeCount: 4071
+Vworst_TP: 3964
+Vworst_TN: 5870
+Vworst_FP: 107
+Vworst_FN: 59
+
+[Worst current-margin regression]
+WorstI_MAE: 0.012192
+WorstI_RMSE: 0.017798
+WorstI_MaxErr: 0.159137
+
+[Total active network-loss regression]
+Ploss_MAE: 0.004677
+Ploss_RMSE: 0.006091
+Ploss_MaxErr: 0.082207
+
+[Worst current-margin classification]
+WorstI_FalseSafe: 0.77%
+WorstI_FalseViolate: 0.80%
+WorstI_SignAcc: 99.210000
+WorstI_BalancedAcc: 99.216359
+WorstI_UnsafeRecall: 99.228896
+WorstI_SafeRecall: 99.203822
+WorstI_TrueUnsafeCount: 2464
+WorstI_PredUnsafeCount: 2505
+WorstI_TP: 2445
+WorstI_TN: 7476
+WorstI_FP: 60
+WorstI_FN: 19
+
+[Loss]
+ValBaseLoss: 0.012144
+ValTotalLoss: 0.016266
+ValVDevReg: 0.000403
+ValVWorstReg: 0.004897
+ValVSignLoss: 0.010407
+ValWorstIReg: 0.003886
+ValPLossReg: 0.003365
+ValPLossRelative: 0.001736
+ValPLossObjective: 0.002958
+ValISignLoss: 0.005005
+
+Binary count estimate: {'sgc_binary': 0, 'vdev_head_binary': 24, 'vworst_head_binary': 24, 'iworst_head_binary': 24, 'ploss_head_binary': 24, 'readout_binary': 96, 'total_binary': 96, 'K': 4, 'order_count': 5, 'use_sgc_relu': False, 'predict_target': 'four direct scalars: Vdev_total, Vworst, WorstI, Ploss_total'}
+best model: checkpoints\st_sgcn_exp24_nodal_pq_four_direct_scalar_heads_best.pt
+MILP engine: checkpoints\st_sgcn_exp24_nodal_pq_four_direct_scalar_heads_milp_engine.pt
+===============================================================

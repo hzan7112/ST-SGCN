@@ -1,0 +1,71 @@
+================ ST-SGCN Exp25 Final Validation ================
+SelectionMetric: 100.819230
+Output mode: four system-level scalars; Ploss uses shared G with a two-layer head
+SelectionRegressionScore: 0.694736
+SelectionSafetyViolation: 0.749757
+SelectionSafetyFeasible: 0
+
+[Cumulative voltage deviation regression]
+Vdev_MAE: 0.006068
+Vdev_RMSE: 0.007937
+Vdev_MaxErr: 0.059128
+
+[Worst voltage-margin regression]
+Vworst_MAE: 0.001252
+Vworst_RMSE: 0.001623
+Vworst_MaxErr: 0.013548
+
+[Worst voltage-margin classification]
+Vworst_FalseSafe: 1.37%
+Vworst_FalseViolate: 2.04%
+Vworst_SignAcc: 98.230000
+Vworst_BalancedAcc: 98.295852
+Vworst_UnsafeRecall: 98.632861
+Vworst_SafeRecall: 97.958842
+Vworst_TrueUnsafeCount: 4023
+Vworst_PredUnsafeCount: 4090
+Vworst_TP: 3968
+Vworst_TN: 5855
+Vworst_FP: 122
+Vworst_FN: 55
+
+[Worst current-margin regression]
+WorstI_MAE: 0.012576
+WorstI_RMSE: 0.018109
+WorstI_MaxErr: 0.177921
+
+[Total active network-loss regression]
+Ploss_MAE: 0.002430
+Ploss_RMSE: 0.003129
+Ploss_MaxErr: 0.022375
+
+[Worst current-margin classification]
+WorstI_FalseSafe: 0.73%
+WorstI_FalseViolate: 0.92%
+WorstI_SignAcc: 99.130000
+WorstI_BalancedAcc: 99.176938
+WorstI_UnsafeRecall: 99.269481
+WorstI_SafeRecall: 99.084395
+WorstI_TrueUnsafeCount: 2464
+WorstI_PredUnsafeCount: 2515
+WorstI_TP: 2446
+WorstI_TN: 7467
+WorstI_FP: 69
+WorstI_FN: 18
+
+[Loss]
+ValBaseLoss: 0.011202
+ValTotalLoss: 0.015445
+ValVDevReg: 0.000586
+ValVWorstReg: 0.005742
+ValVSignLoss: 0.011320
+ValWorstIReg: 0.004103
+ValPLossReg: 0.000891
+ValPLossRelative: 0.000413
+ValPLossObjective: 0.000771
+ValISignLoss: 0.005210
+
+Binary count estimate: {'sgc_binary': 0, 'vdev_head_binary': 24, 'vworst_head_binary': 24, 'iworst_head_binary': 24, 'ploss_head_binary': 64, 'ploss_head_layer1_binary': 32, 'ploss_head_layer2_binary': 32, 'readout_binary': 136, 'total_binary': 136, 'K': 5, 'order_count': 6, 'use_sgc_relu': False, 'predict_target': 'four direct scalars: Vdev_total, Vworst, WorstI, Ploss_total; Ploss uses G_shared with an independent 32->32 two-ReLU head'}
+best model: checkpoints\st_sgcn_exp25_k5_h24_shared_ploss_two_layer_best.pt
+MILP engine: checkpoints\st_sgcn_exp25_k5_h24_shared_ploss_two_layer_milp_engine.pt
+===============================================================

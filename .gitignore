@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+
+.vscode/
+.idea/
+
+*.pt
+*.pth
+*.ckpt
+
+runs/
+logs/
+results/
+
+.ipynb_checkpoints/

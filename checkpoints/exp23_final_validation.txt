@@ -1,0 +1,48 @@
+================ ST-SGCN Exp23 Final Validation ================
+SelectionMetric: 102.244351
+Output mode: three directly predicted system-level scalars
+SelectionRegressionScore: 1.634362
+SelectionSafetyViolation: 2.080915
+SelectionSafetyFeasible: 0
+
+[Cumulative voltage deviation regression]
+Vdev_MAE: 0.019261
+Vdev_RMSE: 0.022800
+Vdev_MaxErr: 0.097161
+
+[Unified safety-margin regression]
+Hsafe_MAE: 0.055170
+Hsafe_RMSE: 0.069027
+Hsafe_MaxErr: 0.380569
+
+[Unified safety-margin classification]
+Hsafe_FalseSafe: 1.86%
+Hsafe_FalseViolate: 4.44%
+Hsafe_SignAcc: 97.050000
+Hsafe_BalancedAcc: 96.849418
+Hsafe_UnsafeRecall: 98.139334
+Hsafe_SafeRecall: 95.559503
+Hsafe_TrueUnsafeCount: 2311
+Hsafe_PredUnsafeCount: 2343
+Hsafe_TP: 2268
+Hsafe_TN: 1614
+Hsafe_FP: 75
+Hsafe_FN: 43
+
+[Total active network-loss regression]
+Ploss_MAE: 0.009744
+Ploss_RMSE: 0.012782
+Ploss_MaxErr: 0.071931
+
+[Loss]
+ValBaseLoss: 0.013491
+ValTotalLoss: 0.013503
+ValVDevReg: 0.001867
+ValHsafeReg: 0.009063
+ValHSignLoss: 0.000234
+ValPLossReg: 0.002561
+
+Binary count estimate: {'sgc_binary': 0, 'vdev_head_binary': 32, 'hsafe_head_binary': 32, 'ploss_head_binary': 32, 'readout_binary': 96, 'total_binary': 96, 'K': 4, 'order_count': 5, 'use_sgc_relu': False, 'predict_target': 'three direct scalars: Vdev_total, Hsafe, Ploss_total'}
+best model: checkpoints\st_sgcn_exp23_three_direct_scalar_heads_best.pt
+MILP engine: checkpoints\st_sgcn_exp23_three_direct_scalar_heads_milp_engine.pt
+===============================================================
